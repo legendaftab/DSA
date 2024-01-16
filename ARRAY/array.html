@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>search of array in js true/false</h1>
+    <script>
+        let a1 = [1, 2, 3, 4, 5];
+        let target = 4;
+        let result = searchArray(a1, target)
+        console.log(result);
+        function searchArray(a1, target) {
+            return a1.includes(target);
+        }
+    </script>
+    <h1> search value of array in js</h1>
+    <script>
+        let myArray = [1, 2, 3, 4, 5];
+        let targetElement = 3;
+        let result1 = searchArray(myArray, targetElement);
+        console.log(result1); // Output: true
+
+        function searchArray(array, target) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === target) {
+                    return i;
+                }
+            }
+            return -1; // Element not found
+        }
+    </script>
+    <h1>slice of array</h1>
+    <script>
+        let original = [10, 7, 8, 6, 5];
+        let newArray = original.slice(1, 4);
+        // Using slice to create a new array with elements from index 1 to 3 (exclusive)
+        console.log(original);
+        console.log(newArray);
+    </script>
+    <h1>splice of array</h1>
+    <script>
+        let originalArray = [1, 4, 7, 8, 9, 5, 1, 5];
+        originalArray.splice(1, 2, 786, 313);
+        // Using splice to remove elements from index 1 to 2 and insert 786, 313 at index 1
+        console.log(originalArray);
+        let myArray7 = [1, 2, 3, 4, 5];
+        myArray7.splice(2, 1); // Removes 1 element starting from index 2
+        console.log(myArray); // Output: [1, 2, 4, 5]
+    </script>
+</body>
+
+
+</html>
