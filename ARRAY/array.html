@@ -80,6 +80,74 @@
         }
 
     </script>
+    <h1> print number from 1 to 10</h1>
+    <script>
+        let first = 1;
+        while (first <= 10) {
+            console.log(first);
+            first++;
+        }
+    </script>
+    <h1>range of 1 to n</h1>
+    <script>
+        let num1 = 10;
+        let num2 = prompt("write last number upto?");
+        while (num1 < num2) {
+            console.log(num1);
+            num1++;
+        }
+    </script>
+    <h1>print sum of first natural numbers</h1>
+    <script>
+        let sum = 0;
+        let n = 5;
+        let i = 1;
+        while (i <= n) {
+            sum += i;
+            i++;
+            console.log(sum);
+        }
+    </script>
+    <h1>last digit number</h1>
+    <script>
+        //     let a = 10899;
+        //  while(a>0){
+        //     let lastDigit = a%10;
+        //     console.log("last digit is");
+        //     a=a/10;
+        //  }
+        //console.log(a);
+    </script>
+    <h1>print the star</h1>
+    <script>
+        function printStarPattern(rows) {
+            for (let i = 1; i <= rows; i++) {
+                let stars = '';
+                for (let j = 1; j <= i; j++) {
+                    stars += '*';
+                }
+                console.log(stars);
+            }
+        }
+
+        // Example usage:
+        const numberOfRows = 5;
+        printStarPattern(numberOfRows);
+    </script>
+    <h1>inverteed star</h1>
+    <script>
+        function inverted(n) {
+            for (let i = 1; i <= n; i++) {
+                let st = "";
+                for (let j = 1; j <= n - i + 1; j++) {
+                    st += '*';
+                }
+                console.log(st);
+            }
+        }
+        let numi=5;
+        inverted(numi);
+    </script>
 
 </body>
 
