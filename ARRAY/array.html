@@ -52,6 +52,35 @@
         myArray7.splice(2, 1); // Removes 1 element starting from index 2
         console.log(myArray); // Output: [1, 2, 4, 5]
     </script>
+    <h1> Binary sorting in array</h1>
+    <script>
+        function binarysearch(array, target) {
+            let low = 0;
+            let high = array.length - 1;
+            while (low < high) {
+                let mid = Math.floor((low + high) / 2);
+                if (array[mid] == target) {
+                    return mid;
+                } else if (array[mid] < target) {
+                    return low = mid + 1;
+                } else {
+                    return high = mid - 1;
+                }
+            }
+            return -1;
+        }
+
+        let item1 = [10, 8, 7, 4, 5];
+        let item2 = 7;
+        let resultingData = binarysearch(item1, item2);
+        if (resultingData != -1) {
+            console.log("resulting data found at a index" + resultingData);
+        } else {
+            console.log("not found in data ")
+        }
+
+    </script>
+
 </body>
 
 
