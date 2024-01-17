@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>larget numbers at index</h1>
+    <script>
+        function largest(array, target) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > target) {
+                    return i;
+                    i++;
+                }
+            }
+            return -1
+        }
+        let num = [1, 2, 4, 5, 6, 7];
+        let compare = 3;
+        let val = largest(num, compare);
+        console.log(val);
+    </script>
+    <h1>largest numbers values</h1>
+    <script>
+        function largest(arr) {
+            if (arr.length === 0) {
+                return "Array is empty";
+            }
+
+            let largest = arr[0]; // Assume the first element is the largest
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > largest) {
+                    largest = arr[i];
+                }
+            }
+
+            return largest;
+        }
+
+        let a = [1, 2, 3, 4, 5, 10];
+        let c = largest(a);
+        console.log(c);
+
+    </script>
+    <h1>smallest numbers values</h1>
+    <script>
+        function smallest(arr) {
+            if (arr.length === 0) {
+                return "Array is empty";
+            }
+
+            let smallest = arr[0]; // Assume the first element is the smallest
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] < smallest) {
+                    smallest = arr[i];
+                }
+            }
+
+            return smallest;
+        }
+
+        let all = [7, 8, 9, 4, 5, 6];
+        let b1 = smallest(all);
+        console.log(b1);
+    </script>
+    <h1>second largest numbers</h1>
+    <script>
+        function secondLargest(arr) {
+//   if (arr.length < 2) {
+//     return "Array should have at least two elements";
+//   }
+  // Sort the array in descending order
+  arr.sort((a, b) => b - a);
+
+  // The second element (index 1) is the second largest
+  return arr[1];
+}
+
+let numbers = [5, 2, 9, 8, 1, 7];
+let secondLargestNumber = secondLargest(numbers);
+console.log("The second largest number is:", secondLargestNumber);
+
+    </script>
+</body>
+
+</html>array
