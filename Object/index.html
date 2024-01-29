@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Hello bhai</h1>
 
     <script>
         // create object
         let rectangle = {
-            length:10,
-            breadth:20,
+            length: 10,
+            breadth: 20,
 
-            draw:function(){   // when u create inside object is not function this is method
-             console.log("drawing rectangles")   
+            draw: function () {   // when u create inside object is not function this is method
+                console.log("drawing rectangles")
             }
         }
 
@@ -26,17 +28,90 @@
 
         //Pascal --> NumberOfStudents
 
-        function Rectangle(l,b){
+        function Rectangle(l, b) {
             this.length = l;
             this.breadth = b;
-            this.draw = function(){ 
-               console.log("drawing")
+            this.draw = function () {
+                console.log("drawing")
             }
         }
 
         //object creatation using consstructor function
 
-        let rectangleObject = new Rectangle(4,6);
+        let rectangleObject = new Rectangle(4, 6);
+        // Dynamic Nature of Objects
+        rectangleObject.color = 'black';
+        console.log(rectangleObject);
+
+        delete rectangleObject.color;
+        console.log(rectangleObject);
+
+        let a = 10;
+        let b = a;
+        a++;
+        console.log(a);
+        console.log(b);
+
+        let a1 = {
+            value: 10,
+        }
+        let b1 = a1;
+        a1.value++;
+        console.log(a1.value);
+        console.log(b1.value);
+
+
+        // NOTE: PEMITATIVE ARE COPIED BY THEIR value
+        //  references are copired by their address/references
+
+        let rec = {
+            length: 10,
+            breadth: 20,
+        };
+
+        if ('length' in rec) {
+            console.log("present")
+        } else {
+            console.log("absent")
+        }
+
+        for (let key in rec) {
+            console.log(key, rec[key]);
+        }
+
+
+        //1 way
+        let src = {
+            a: 10,
+            b: 20,
+            c: 30,
+        };
+
+        let dest = {};
+
+        for (let key in src) {
+            dest[key] = src[key];
+        }
+        console.log(dest);
+        //2 way
+        let src2 = {
+            a: 10,
+            b: 20,
+            c: 30,
+        };
+        let dest2 = Object.assign({}, src2);
+        console.log(dest2);
+
+        //3 WAY
+        let src3 = {
+            a: 10,
+            b: 20,
+            c: 30,
+        };
+
+        let dest3 = {...src3};
+        console.log(dest3);
     </script>
 </body>
+
 </html>
