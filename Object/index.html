@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello bhai</h1>
+
+    <script>
+        // create object
+        let rectangle = {
+            length:10,
+            breadth:20,
+
+            draw:function(){   // when u create inside object is not function this is method
+             console.log("drawing rectangles")   
+            }
+        }
+
+        // factory function and constructor function
+
+        // constructor function--Pascal functions
+        // camelCase - numberOfStudents
+
+        //Pascal --> NumberOfStudents
+
+        function Rectangle(l,b){
+            this.length = l;
+            this.breadth = b;
+            this.draw = function(){ 
+               console.log("drawing")
+            }
+        }
+
+        //object creatation using consstructor function
+
+        let rectangleObject = new Rectangle(4,6);
+    </script>
+</body>
+</html>
