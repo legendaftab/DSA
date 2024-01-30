@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> inBuilt array functions</h3>
+    <script>
+        console.log(Math.random())
+    </script>
+
+    <h3>string</h3>
+    <script>
+        let lastName = 'KING';
+        console.log(typeof lastName);
+        console.log((lastName.length));
+        console.log((lastName.startsWith('KING')));
+        console.log((lastName.startsWith('MUNNA')));
+        console.log((lastName.endsWith('MUNNA')));
+        console.log((lastName.toUpperCase()));
+
+        let firstName = new String('awati sharif');
+        console.log(typeof firstName);
+
+        let sms = "this is my words";
+        let words = sms.split('');
+        console.log(words);
+
+    </script>
+
+    <h3> template Literals</h3>
+
+    <script>
+        let a = 'this is  \n my second  \n msg';
+        console.log(a);
+
+        let b = `this is 
+           me 
+          boss`
+          console.log(b)
+          let date = new Date();
+          console.log(date);
+
+          let date2 =  new Date(1998,11,20,7);
+          console.log(date2);
+    </script>
+    <h3>array</h3>
+    <script>
+        let numbers =[1,2,45,6];
+        console.log(numbers);
+        numbers.push(8);
+        numbers.unshift(10);
+        numbers.splice(2,0,786);
+    </script>
+</body>
+
+</html>
