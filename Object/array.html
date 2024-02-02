@@ -41,20 +41,56 @@
         let b = `this is 
            me 
           boss`
-          console.log(b)
-          let date = new Date();
-          console.log(date);
+        console.log(b)
+        let date = new Date();
+        console.log(date);
 
-          let date2 =  new Date(1998,11,20,7);
-          console.log(date2);
+        let date2 = new Date(1998, 11, 20, 7);
+        console.log(date2);
     </script>
     <h3>array</h3>
+    <!-- collection of items  -->
     <script>
-        let numbers =[1,2,45,6];
+        let numbers = [1, 2, 45, 6];
         console.log(numbers);
         numbers.push(8);
         numbers.unshift(10);
-        numbers.splice(2,0,786);
+        numbers.splice(2, 0, 786);
+        console.log(numbers)
+        console.log(numbers.includes(6));
+        console.log(numbers.indexOf(2));
+
+
+        let courses = [
+            { no: 1, name: 'king' },
+            { no: 2, name: "appu" },
+        ]
+        console.log(courses);
+        console.log(courses.indexOf(1));  //best examples
+        console.log(courses.includes({ no: 1, nameL: 'king' }));  //best examples
+        //index of not used for object it only used for array
+
+        //for object we used call back functions
+        let course = courses.find(function (course) {
+            return course.name == 'king';
+            return course.id = 1;
+        })
+
+        //reduce above code by arrow fuunctions
+
+        let course1 = courses.find(course => {
+            course.name == 'king'
+        })
+        console.log(course);
+
+        let num = [1, 2, 4, 5, 6];
+        let num2 = num;
+        // num = [];
+        // num.length = 0;   //1 method length zero karo 
+        num.splice(0,num.length)  //or used this
+        console.log(num);
+        console.log(num2);
+
     </script>
 </body>
 
