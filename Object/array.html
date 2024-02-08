@@ -87,11 +87,63 @@
         let num2 = num;
         // num = [];
         // num.length = 0;   //1 method length zero karo 
-        num.splice(0,num.length)  //or used this
+        num.splice(0, num.length)  //or used this
         console.log(num);
         console.log(num2);
 
+        let no = [1, 4, 5, 6, 7, 8];
+        no.shift();  // first se remove
+        no.pop();  // end se remove
+        no.splice(2, 1);  // middle se remove
+        console.log(no);
     </script>
+
+    <h3>Emptying an array</h3>
+    <script>
+        let n = [1, 2, 4, 5, 6];
+        let n2 = n;
+        // n.length = 0;// dono khali karna hai
+        n.splice(0, n.length);  //khali karna hai toh used karo
+        console.log(n2);
+        // n = [];
+        console.log(n);
+    </script>
+
+    <h3>combining and slicing arrays</h3>
+
+    <script>
+        let first = [1, 2, 3];
+        let second = [4, 5, 6];
+        let combine = first.concat(second);
+        console.log(combine);
+
+        let sliced = combine.slice(2, 3);
+        console.log(sliced);
+
+        let marks = [10, 20, 3, 40, 50, 60, 70];
+        let sliced1 = marks.slice(1, 5);
+        console.log(sliced1);
+
+        let sliced2 = marks.slice(2);
+        console.log(sliced2);
+
+        let q = [1, 2, 3];
+        let p = [4, 5, 6];
+        let combined = [...q, 'a', ...p, 'qwer'];
+        console.log(combined);
+
+        //copy karn ahai muze
+        let copy = [...combined];
+        console.log(copy);
+    </script>
+
+    <h1>Iterating an array</h1>
+    <script>
+   let arr = [10,20,30,40,50];
+    for(let item of arr);
+    console.log(arr);
+    </script>
+
 </body>
 
 </html>
