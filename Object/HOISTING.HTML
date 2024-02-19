@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hoisting</h1>
+    -it is process of moving function declaration to the top of file.
+    -it done by automatically js engine. (in chrome V8 javascript engine).
+    -JS is dynamic language.
+    <script>
+
+        let x = 1;
+        x = 'a';
+        console.log(x);
+
+        function sum(a, b) {
+            console.log(arguments);
+            return a + b;
+        };
+        console.log(sum(1, 2));
+        // console.log(sum(1));  //o/p is NaN not give second number
+        // console.log(sum(1, 2,5,7,8,9));
+        // unknown number found in arguments
+
+
+        // all values in arguments in function
+        // special object arguments
+        function add() {
+            let total = 0;
+            for (let value of arguments)
+                total = total + value;
+            return total;
+        }
+        let answer = add(10, 9, 8);
+        console.log(answer);
+    </script>
+
+    <h3>Rest operator...(copy of array)</h3>
+    <script>
+        // jo bhi i/p me donge woh array me ayega
+        // REst paramaeter is last parameter
+        function operator(a, b, ...args) {
+            console.log(args);
+        }
+        operator(7, 8, 5, 1, 2, 3);
+    </script>
+    <h1>DEfault parameters</h1>
+
+    <script>
+        function interest(p, r, y) {
+            return p * r * y / 100;
+        }
+        console.log(interest(1000, 10, 5));
+
+        // default value must be used
+
+        function interest1(p, r = 6, y = 10) {  // r is degalut parameter r ke baad sab default parameter pass karna padega
+            return p * r * y / 100;
+        }
+        console.log(interest1(1000, undefined, 8));  // hack 
+    </script>
+    <script>
+        let person = {
+            fName: 'AFTAB',
+            lName: 'Kazi',
+        }
+        console.log(person);
+
+        function fullName() {   // read only function
+            return `${person.fName}            ${person.lName}`;
+        }
+        console.log(fullName());
+    </script>
+    <h3>getter and setter</h3>
+    getter - access properties.
+    setter - change or multiple Properties.
+
+    <script>
+        let man = {
+            fName: 'appu',
+            lName: 'kazi786',
+            get fullName() {
+                return `${man.fName}    ${man.lName}`;
+            },
+            set fullName(value) {
+                let parts = value.split(' ');
+                this.fName = parts[0];
+                this.lName = parts[1];
+            }
+        };
+        console.log('Getter method call:-', man.fullName);//getter call
+
+        man.fullName = 'Hasnainsahab qadri';
+        console.log('Setter method call:-', man.fullName); // setter methods
+    </script>
+
+    <h3>try and catch block error:handling</h3>
+    <script>
+
+        try {
+            let a = 100;
+            console.log(a);
+        }
+        catch (error) {
+            alert("mis match variable in console");
+        }
+    </script>
+    <h3>scope-- variable ka jivan </h3>
+
+    <script>
+        {
+            let a = 5;
+            console.log('Block scope hai', a);
+
+            var b = 'var keyword is used';
+        }
+        console.log('var is used outside the block', b);
+
+        function walk() {
+            var a = 25;
+            console.log('var is  not used outside the function',a);
+        }
+
+
+    </script>
+</body>
+
+</html>
