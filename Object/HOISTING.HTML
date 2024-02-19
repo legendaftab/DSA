@@ -119,14 +119,62 @@
 
             var b = 'var keyword is used';
         }
-        console.log('var is used outside the block', b);
+        console.log('var is working outside the block', b);
 
         function walk() {
             var a = 25;
-            console.log('var is  not used outside the function',a);
+            console.log('var is  not used outside the function', a);
+        }
+        function a() {
+            const ab = 5;
+            console.log('inside a function', ab);
+        }
+        a();
+
+        function bk() {
+            const ab = 7;
+            console.log('inside b function', ab);
+        }
+        bk();
+
+        const amp = 5;
+        function xyz() {
+            const amp = 786;
+            console.log(amp);
         }
 
+        for (let i = 0; i <= 10; i++) {
+            console.log('let keyword inside loop', i);
+        }
 
+        for (var i = 0; i < 10; i++) {
+
+        }
+        console.log('var keyword outside loop', i);
+
+        if (true) {
+            var a = 5;
+        }
+        // console.log(a);
+
+        function a1() {
+            const a = 5;
+        }
+
+        function b1() {
+            const a = 5;
+        }
+
+        // sum of array
+        let arr = [-1, -2, -3, -4, -5];
+        let total = 0;
+        for (let value of arr)
+            total = total + value;
+        console.log(total);
+
+        //2 way sum
+       let totalsum = arr.reduce((accumulator,currentValue) => accumulator + currentValue);
+       console.log('the sum is ',totalsum);
     </script>
 </body>
 
